@@ -1,0 +1,48 @@
+/* themes.css: palet light (default) & dark.
+   Urutan prioritas: data-theme manual > preferensi sistem. */
+:root {
+  color-scheme: light;
+  --bg: #f7f3ea;
+  --surface: #fffdf8;
+  --text: #26332c;
+  --heading: #1d3a2c;
+  --muted: #5b685f;
+  --border: #e4dcc9;
+  --primary: #2f5d46;
+  --on-primary: #ffffff;
+  --accent: #a64a26;
+  --link: #2f5d46;
+  --hero-overlay: linear-gradient(180deg, rgb(10 28 20 / 0.45) 0%, rgb(10 28 20 / 0.7) 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0f1a15;
+    --surface: #17261f;
+    --text: #e6eee8;
+    --heading: #f1f6f2;
+    --muted: #a3b3a9;
+    --border: #27392f;
+    --primary: #7fc29b;
+    --on-primary: #0f1a15;
+    --accent: #ec9a70;
+    --link: #8fd0aa;
+    --hero-overlay: linear-gradient(180deg, rgb(5 14 10 / 0.6) 0%, rgb(5 14 10 / 0.85) 100%);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0f1a15;
+  --surface: #17261f;
+  --text: #e6eee8;
+  --heading: #f1f6f2;
+  --muted: #a3b3a9;
+  --border: #27392f;
+  --primary: #7fc29b;
+  --on-primary: #0f1a15;
+  --accent: #ec9a70;
+  --link: #8fd0aa;
+  --hero-overlay: linear-gradient(180deg, rgb(5 14 10 / 0.6) 0%, rgb(5 14 10 / 0.85) 100%);
+}
